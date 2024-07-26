@@ -2,5 +2,15 @@
   "root": true,
   "extends": [
     "trybe-fundamentals"
-  ]
+  ],
+  "rules": {
+    "indent": [
+      "error",
+      2
+    ],
+    "quotes": [
+      "error",
+      "double"
+    ]
+  }
 }
