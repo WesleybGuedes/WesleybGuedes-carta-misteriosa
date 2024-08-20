@@ -1,0 +1,48 @@
+{
+  "type": "excalidraw",
+  "version": 2,
+  "source": "https://marketplace.visualstudio.com/items?itemName=pomdtr.excalidraw-editor",
+  "elements": [
+    {
+      "id": "sHPDIVdUOcchDVwZFcI_N",
+      "type": "text",
+      "x": 179,
+      "y": 96,
+      "width": 642.6192626953125,
+      "height": 125,
+      "angle": 0,
+      "strokeColor": "#1e1e1e",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [],
+      "frameId": null,
+      "roundness": null,
+      "seed": 167209670,
+      "version": 191,
+      "versionNonce": 147397402,
+      "isDeleted": false,
+      "boundElements": null,
+      "updated": 1724117180309,
+      "link": null,
+      "locked": false,
+      "text": "capturar o button\nadcionar event\ncriar uma funcao para gerar a carta\ndentro da funcao criar um if caso exista carta apagala\ncaso nao exista carta, criar cada palavra envolta na tag span",
+      "fontSize": 20,
+      "fontFamily": 1,
+      "textAlign": "left",
+      "verticalAlign": "top",
+      "baseline": 118,
+      "containerId": null,
+      "originalText": "capturar o button\nadcionar event\ncriar uma funcao para gerar a carta\ndentro da funcao criar um if caso exista carta apagala\ncaso nao exista carta, criar cada palavra envolta na tag span",
+      "lineHeight": 1.25
+    }
+  ],
+  "appState": {
+    "gridSize": null,
+    "viewBackgroundColor": "#ffffff"
+  },
+  "files": {}
+}
