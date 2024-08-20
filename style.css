@@ -4,6 +4,15 @@
   box-sizing: border-box;
 }
 
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
 .newspaper {
   background-color: antiquewhite;
   font-family: Times New Roman, serif;
