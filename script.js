@@ -1,4 +1,4 @@
-const cartaGerada = document.getElementById("carta-gerada");
+const letter = document.getElementById("carta-gerada");
 const button = document.getElementById("criar-carta");
 const input = document.getElementById("carta-texto");
 const counter = document.getElementById("carta-contador");
@@ -14,34 +14,35 @@ function getRandomInt(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
-function criarSpanComClassesAleatorias(texto) {
+function createSpanWithRandomClasses(text) {
   const span = document.createElement("span");
-  span.textContent = texto;
+  span.textContent = text;
 
   for (let i = 0; i < Object.values(classes).length; i += 1) {
-    const grupo = Object.values(classes)[i];
-    const indiceAleatorio = getRandomInt(0, grupo.length - 1);
-    span.classList.add(grupo[indiceAleatorio]);
+    const group = Object.values(classes)[i];
+    const randomIndex = getRandomInt(0, group.length - 1);
+    span.classList.add(group[randomIndex]);
   }
 
   return span;
 }
-function gerarCarta(texto) {
-  cartaGerada.innerHTML = "";
-  const palavras = texto.split(" ");
-  counter.textContent = palavras.length;
-  palavras.forEach((palavra) => {
-    const span = criarSpanComClassesAleatorias(palavra);
-    cartaGerada.appendChild(span);
+
+function generateLetter(text) {
+  letter.innerHTML = "";
+  const words = text.split(" ");
+  counter.textContent = words.length;
+  words.forEach((word) => {
+    const span = createSpanWithRandomClasses(word);
+    letter.appendChild(span);
   });
 }
 
 button.addEventListener("click", () => {
-  const texto = input.value;
+  const text = input.value;
 
-  if (texto.trim() === "") {
-    cartaGerada.textContent = "Por favor, digite o conteúdo da carta.";
+  if (text.trim() === "") {
+    letter.textContent = "Por favor, digite o conteúdo da carta.";
   } else {
-    gerarCarta(texto);
+    generateLetter(text);
   }
 });
