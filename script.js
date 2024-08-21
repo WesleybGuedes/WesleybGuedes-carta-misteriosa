@@ -1,6 +1,7 @@
 const cartaGerada = document.getElementById("carta-gerada");
 const button = document.getElementById("criar-carta");
 const input = document.getElementById("carta-texto");
+const counter = document.getElementById("carta-contador");
 
 const classes = {
   estilos: ["newspaper", "magazine1", "magazine2"],
@@ -27,8 +28,8 @@ function criarSpanComClassesAleatorias(texto) {
 }
 function gerarCarta(texto) {
   cartaGerada.innerHTML = "";
-
   const palavras = texto.split(" ");
+  counter.textContent = palavras.length;
   palavras.forEach((palavra) => {
     const span = criarSpanComClassesAleatorias(palavra);
     cartaGerada.appendChild(span);
