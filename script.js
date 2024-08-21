@@ -26,6 +26,14 @@ function createSpanWithRandomClasses(text) {
   return span;
 }
 
+function applyRandomClasses(element) {
+  element.classList.remove(...element.classList);
+  Object.values(classes).forEach((group) => {
+    const randomIndex = getRandomInt(0, group.length - 1);
+    element.classList.add(group[randomIndex]);
+  });
+}
+
 function generateLetter(text) {
   letter.innerHTML = "";
   const words = text.split(" ");
@@ -33,6 +41,9 @@ function generateLetter(text) {
   words.forEach((word) => {
     const span = createSpanWithRandomClasses(word);
     letter.appendChild(span);
+    span.addEventListener("click", () => {
+      applyRandomClasses(span);
+    });
   });
 }
 
