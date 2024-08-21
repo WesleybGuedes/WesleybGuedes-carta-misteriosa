@@ -18,11 +18,10 @@ function createSpanWithRandomClasses(text) {
   const span = document.createElement("span");
   span.textContent = text;
 
-  for (let i = 0; i < Object.values(classes).length; i += 1) {
-    const group = Object.values(classes)[i];
+  Object.values(classes).forEach((group) => {
     const randomIndex = getRandomInt(0, group.length - 1);
     span.classList.add(group[randomIndex]);
-  }
+  });
 
   return span;
 }
