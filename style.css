@@ -65,3 +65,22 @@ body {
 .skewright {
   transform: skewX(-10deg);
 }
+
+.container {
+  text-align: center;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#carta-gerada {
+  font-size: 3rem;
+  margin-top: 100px;
+}
+
+.input-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
