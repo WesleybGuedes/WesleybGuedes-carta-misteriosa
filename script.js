@@ -10,9 +10,7 @@ const classes = {
 };
 
 function getRandomInt(min, max) {
-  const mini = Math.ceil(min);
-  const maxi = Math.floor(max);
-  return Math.floor(Math.random() * (maxi - mini + 1)) + mini;
+  return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
 function criarSpanComClassesAleatorias(texto) {
