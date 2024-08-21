@@ -14,18 +14,6 @@ function getRandomInt(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
-function createSpanWithRandomClasses(text) {
-  const span = document.createElement("span");
-  span.textContent = text;
-
-  Object.values(classes).forEach((group) => {
-    const randomIndex = getRandomInt(0, group.length - 1);
-    span.classList.add(group[randomIndex]);
-  });
-
-  return span;
-}
-
 function applyRandomClasses(element) {
   element.classList.remove(...element.classList);
   Object.values(classes).forEach((group) => {
@@ -39,7 +27,9 @@ function generateLetter(text) {
   const words = text.split(" ");
   counter.textContent = words.length;
   words.forEach((word) => {
-    const span = createSpanWithRandomClasses(word);
+    const span = document.createElement("span");
+    span.textContent = word;
+    applyRandomClasses(span);
     letter.appendChild(span);
     span.addEventListener("click", () => {
       applyRandomClasses(span);
